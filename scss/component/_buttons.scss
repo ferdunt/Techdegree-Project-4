@@ -5,29 +5,41 @@
 .btn {
   margin-top: 15px;
   width: 100%;
-  color: #fff;
+  color: $color-white;
   border: none;
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+  transition: background-color 0.5s ease-out;
+  @include media-query($Size-med) {
+    padding: 10px 30px;
+    & + .btn {
+      margin-left: 10px;
+    }
+  }
 }
 
 .default {
   background-color: #51ddfc;
+  @include effect(#51ddfc);
 }
 
 .error {
   background-color: #e4757a;
+  @include effect(#e4757a);
 }
 
 .info {
   background-color: #927bc1;
+  @include effect(#927bc1);
 }
 
 .success {
   background-color: #63cc82;
+  @include effect(#63cc82);
 }
 
 .warning {
   background-color: #fd7856;
+  @include effect(#fd7856);
 }
